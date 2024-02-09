@@ -14,42 +14,42 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = 2f;
+        speed = 0.03f;
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             rb.position += new Vector2(speed, 0);
             Ue.SetActive(true);
-            Hidari.SetActive(false);
-            Migi.SetActive(false);
+            //Hidari.SetActive(false);
+            //Migi.SetActive(false);
             Sita.SetActive(false);
         }
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.LeftArrow))
         {
             rb.position += new Vector2(-speed, 0);
             Ue.SetActive(false);
-            Hidari.SetActive(false);
-            Migi.SetActive(false);
+            //Hidari.SetActive(false);
+            //Migi.SetActive(false);
             Sita.SetActive(true);
         }
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.UpArrow))
         {
             rb.position += new Vector2(0,speed);
             Migi.SetActive(true);
             Hidari.SetActive(false);
-            Sita.SetActive(false):
-            Ue.SetActive(false);
+            //Sita.SetActive(false);
+            //Ue.SetActive(false);
         }
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.DownArrow))
         {
             rb.position += new Vector2(0, -speed);
             Hidari.SetActive(true);
             Migi.SetActive(false);
-            Sita.SetActive(false):
-            Ue.SetActive(false);
+            //Sita.SetActive(false);
+            //Ue.SetActive(false);
         }
     }
 }
