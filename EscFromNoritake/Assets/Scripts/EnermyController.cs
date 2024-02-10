@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using UnityEngine.AI;
 
-public class EnermyController :MonoBehavior
+public class EnermyController : MonoBehaviour
 {
     public NavMeshAgent Noritake;
     public GameObject Player;//Playerを自動で追尾する　Playerは迫りくるノリタケを交わし続けなければならない
@@ -14,9 +14,9 @@ public class EnermyController :MonoBehavior
 
     void Update () 
     {
-        if (Goal != null) 
+        if (Player != null) 
         {
-            Noritake.destination  = player.transform.position;//https://qiita.com/aimy-07/items/d1fea617ab9cbb3bd1ed 詳しくはこ↑こ↓
+            Noritake.destination  = Player.transform.position;//https://qiita.com/aimy-07/items/d1fea617ab9cbb3bd1ed 詳しくはこ↑こ↓
         }
         
     }
