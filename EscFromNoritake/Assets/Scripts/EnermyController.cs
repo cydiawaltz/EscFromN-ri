@@ -25,6 +25,7 @@ public class EnermyController :MonoBehavior
 		if( other.tag == "player")
 		{
 			//速度２倍　https://qiita.com/Amatsuki/items/af28a5f3aa370923def0 https://styly.cc/ja/tips/unity-navmesh-ai/ 
+            //https://qiita.com/Butterfly-Dream/items/1ad47dd2bd75bfc71ce2 
 		}
 	}
 }
