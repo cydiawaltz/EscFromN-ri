@@ -23,16 +23,16 @@ public class PlayerController : MonoBehaviour
         {
             rb.position += new Vector2(speed, 0);
             Ue.SetActive(true);
-            //Hidari.SetActive(false);
-            //Migi.SetActive(false);
+            Hidari.SetActive(false);
+            Migi.SetActive(false);
             Sita.SetActive(false);
         }
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             rb.position += new Vector2(-speed, 0);
             Ue.SetActive(false);
-            //Hidari.SetActive(false);
-            //Migi.SetActive(false);
+            Hidari.SetActive(false);
+            Migi.SetActive(false);
             Sita.SetActive(true);
         }
         if(Input.GetKey(KeyCode.UpArrow))
@@ -40,16 +40,16 @@ public class PlayerController : MonoBehaviour
             rb.position += new Vector2(0,speed);
             Migi.SetActive(true);
             Hidari.SetActive(false);
-            //Sita.SetActive(false);
-            //Ue.SetActive(false);
+            Sita.SetActive(false);
+            Ue.SetActive(false);
         }
         if(Input.GetKey(KeyCode.DownArrow))
         {
             rb.position += new Vector2(0, -speed);
             Hidari.SetActive(true);
             Migi.SetActive(false);
-            //Sita.SetActive(false);
-            //Ue.SetActive(false);
+            Sita.SetActive(false);
+            Ue.SetActive(false);
         }
     }
 }
